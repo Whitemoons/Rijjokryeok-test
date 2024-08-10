@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+:root {
+    --bar-width: 0%;
+    --vh: 1vh;
+}
+
+.viewport {
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+    overflow: hidden;
+}
+
+.startPage {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.startTitle {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.nameInput:focus {
+    outline: none;
+}
+
+.nameInput {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 20px calc(50vw - 170px);
+    border-radius: 14px;
+    border: 1px solid #000000;
+    margin-bottom: 20px;
+}
+
+.startButton {
+    font-size: 25px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 20px calc(50vw - 60px);
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+
+
+
+
+.selectPage {
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selectHeader {
+    width: auto;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.selectTitle {
+    width: calc(100vw - 40px);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.bar {
+    width: calc(100vw - 40px);
+    height: 5px;
+    border-radius: 2.5px;
+    background-color: #d4d4d4;
+}
+
+.bar::before {
+    content: '';
+    display: block;
+    width: var(--bar-width);
+    height: 100%;
+    border-radius: 2.5px;
+    background-color: #000000;
+    transition: all 0.3s ease-in-out;
+}
+
+.selectContent {
+    width: 800vw;
+    height: calc(100% - 70px);
+    display: grid;
+    grid-template-columns: repeat(8, 100vw);
+    transition: all 0.5s ease-in-out;
+    transform: translateX(350vw);
+}
+
+.selectItem {
+    width: 100vw;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 45% 20% 17.5% 17.5%;
+}
+
+.selectText {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selectButton {
+    width: calc(100% - 40px);
+    height: calc(100% - 15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 7.5px 20px;
+    border: 2px solid #000000;
+    cursor: pointer;
+}
+
+.selectButton:active {
+    background-color: #000000;
+    color: #ffffff;
+}
