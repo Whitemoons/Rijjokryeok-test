@@ -31,7 +31,56 @@ function handleSelectButtonClick(event) {
     console.log(`질문 ${questionNumber}, 선택지 ${choiceNumber} 선택됨`);
     
     // 예: 점수 업데이트
-    updateScore(10); // 임시로 10점 추가
+    switch(buttonId) {
+        case '1-1':
+            updateScore(0);
+            break;
+        case '1-2':
+            updateScore(10);
+            break;
+        case '2-1':
+            updateScore(0);
+            break;
+        case '2-2':
+            updateScore(10);
+            break;
+        case '3-1':
+            updateScore(10);
+            break;
+        case '3-2':
+            updateScore(0);
+            break;
+        case '4-1':
+            updateScore(0);
+            break;
+        case '4-2':
+            updateScore(10);
+            break;
+        case '5-1':
+            updateScore(30);
+            break;
+        case '5-2':
+            updateScore(0);
+            break;
+        case '6-1':
+            updateScore(10);
+            break;
+        case '6-2':
+            updateScore(0);
+            break;
+        case '7-1':
+            updateScore(0);
+            break;
+        case '7-2':
+            updateScore(10);
+            break;
+        case '8-1':
+            updateScore(10);
+            break;
+        case '8-2':
+            updateScore(0);
+            break;
+    }
     
     // 다음 질문으로 이동
     const nextQuestionNumber = parseInt(questionNumber) + 1;
