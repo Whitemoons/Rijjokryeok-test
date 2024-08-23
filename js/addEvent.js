@@ -8,7 +8,7 @@ function hideStartPage() {
 // .bar::before의 width를 변화시키는 함수
 function updateProgressBar(step) {
     const bar = document.querySelector('.bar');
-    bar.style.backgroundImage = `url('/img/QuestionScreen/ProgressBarImages/${step}.png')`;
+    bar.style.backgroundImage = `url('img/QuestionScreen/ProgressBarImages/${step}.png')`;
 }
 
 // .selectContent를 왼쪽으로 100vw만큼 이동시키는 함수
@@ -86,9 +86,9 @@ function handleSelectButtonClick(event) {
     if (nextQuestionNumber === 4 || nextQuestionNumber === 7) {
         const selectCalendar = document.querySelector('.selectCalendar');
         if (nextQuestionNumber === 4) {
-            selectCalendar.style.backgroundImage = "url('/img/QuestionScreen/CalendarImages/25.png')";
+            selectCalendar.style.backgroundImage = "url('img/QuestionScreen/CalendarImages/25.png')";
         } else if (nextQuestionNumber === 7) {
-            selectCalendar.style.backgroundImage = "url('/img/QuestionScreen/CalendarImages/26.png')";
+            selectCalendar.style.backgroundImage = "url('img/QuestionScreen/CalendarImages/26.png')";
         }
     }
     if (nextQuestionNumber <= 8) {
@@ -120,27 +120,27 @@ function showResultPage() {
     const finalScore = getScoreFromCookie();
 
     if(finalScore < 10) {
-        resultImg.style.backgroundImage = "url('/img/FinalScreen/MainImages/Lv0.png')";
+        resultImg.style.backgroundImage = "url('img/FinalScreen/MainImages/Lv0.png')";
         resultText1.innerText = resultText[0][0];
         resultText2.innerText = resultText[0][1];
         resultText3.innerText = resultText[0][2];
     } else if(finalScore < 40) {
-        resultImg.style.backgroundImage = "url('/img/FinalScreen/MainImages/Lv10.png')";
+        resultImg.style.backgroundImage = "url('img/FinalScreen/MainImages/Lv10.png')";
         resultText1.innerText = resultText[1][0];
         resultText2.innerText = resultText[1][1];
         resultText3.innerText = resultText[1][2];
     } else if(finalScore < 60) {
-        resultImg.style.backgroundImage = "url('/img/FinalScreen/MainImages/Lv33.png')";
+        resultImg.style.backgroundImage = "url('img/FinalScreen/MainImages/Lv33.png')";
         resultText1.innerText = resultText[2][0];
         resultText2.innerText = resultText[2][1];
         resultText3.innerText = resultText[2][2];
     } else if(finalScore < 90) {
-        resultImg.style.backgroundImage = "url('/img/FinalScreen/MainImages/Lv59.png')";
+        resultImg.style.backgroundImage = "url('img/FinalScreen/MainImages/Lv59.png')";
         resultText1.innerText = resultText[3][0];
         resultText2.innerText = resultText[3][1];
         resultText3.innerText = resultText[3][2];
     } else {
-        resultImg.style.backgroundImage = "url('/img/FinalScreen/MainImages/Lv999999999.png')";
+        resultImg.style.backgroundImage = "url('img/FinalScreen/MainImages/Lv999999999.png')";
         resultText1.innerText = resultText[4][0];
         resultText2.innerText = resultText[4][1];
         resultText3.innerText = resultText[4][2];
