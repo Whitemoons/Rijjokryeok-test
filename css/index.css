@@ -1,6 +1,11 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
 body {
     margin: 0;
     font-family: 'Noto Sans KR', sans-serif;
+    background-image: url('../img/FinalScreen/RioPatternImage.svg');
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 * {
@@ -10,6 +15,18 @@ body {
     user-select: none;
 }
 
+@font-face {
+    font-family: 'ChosunGu';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ImcreSoojin';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+    font-style: normal;
+}
 
 :root {
     --bar-width: 0%;
@@ -18,16 +35,22 @@ body {
 
 .viewport {
     width: 100vw;
-    height: calc(var(--vh, 1vh) * 100);
+    height: 100vh; /* 기본값으로 100vh 사용 */
+    height: calc(var(--vh, 1vh) * 100); /* CSS 변수 사용 */
+    max-height: -webkit-fill-available; /* iOS Safari를 위한 추가 */
     overflow: hidden;
 }
 
 .startPage {
     width: 100vw;
-    height: 100%;
-    position: absolute;
-    left: 0;
+    height: 100vh;
     background-color: #ffffff;
+    background-image: url('../img/StartScreen/BackgroundImage.svg');
+    background-size: cover;
+    background-position: center center; /* 중앙 정렬 */
+    background-repeat: no-repeat; /* 반복 방지 */
+    position: relative;
+    overflow: hidden; /* 넘치는 부분 잘라내기 */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,35 +58,32 @@ body {
     z-index: 100;
 }
 
-.startTitle {
-    font-size: 30px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-.nameInput:focus {
-    outline: none;
-}
-
-.nameInput {
-    text-align: center;
-    font-size: 20px;
-    font-weight: 700;
-    padding: 20px calc(50vw - 170px);
-    border-radius: 14px;
-    border: 1px solid #000000;
-    margin-bottom: 20px;
+.startPage svg {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transform: translateY(-50%); /* 세로 중앙 정렬 */
 }
 
 .startButton {
-    font-size: 25px;
+    font-family: 'ImcreSoojin';
+    font-size: 4vw;
     font-weight: 700;
-    color: #ffffff;
-    background-color: #000000;
-    padding: 20px calc(50vw - 60px);
-    border-radius: 14px;
+    color: #51483c;
+    background-color: #ffffff;
+    padding: 1.5vw calc(10vw);
+    border-radius: 10px;
     cursor: pointer;
+    border: 0.8vw solid #51483c;
+    margin-top: 50vw;
 }
 
+.startButton:click {
+    background-color: #51483c;
+    color: #ffffff;
+}
 
 
 
@@ -74,11 +94,22 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+.selectContainer {
+    width: calc(100% - 60px);
+    height: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .selectHeader {
-    width: auto;
-    height: 70px;
+    width: 100%;
+    height: 30%;
+    min-height: 160px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -86,28 +117,81 @@ body {
 }
 
 .selectTitle {
-    width: calc(100vw - 40px);
+    width: 100%;
+    height: 100%;
     text-align: center;
     font-size: 20px;
     font-weight: 700;
-    margin: 20px 0;
+    margin: 25px 0 20px 0;
+    background-image: url('../img/FinalScreen/TitleImage.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.selectCalendar {
+    width: 100%;
+    height: 80px;
+    margin: 0 0 20px 0;
+    background-image: url('../img/QuestionScreen/CalendarImages/24.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.5s ease-in-out;
 }
 
 .bar {
-    width: calc(100vw - 40px);
-    height: 5px;
-    border-radius: 2.5px;
-    background-color: #d4d4d4;
+    width: 100%;
+    min-width: 300px;
+    height: 20px !important;
+    background-image: url('../img/QuestionScreen/ProgressBarImages/1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.5s ease-in-out;
 }
 
-.bar::before {
-    content: '';
-    display: block;
-    width: var(--bar-width);
+.selectImg {
+    width: 100%;
+    min-width: 300px;
+    max-width: 600px;
     height: 100%;
-    border-radius: 2.5px;
-    background-color: #000000;
-    transition: all 0.3s ease-in-out;
+    margin: 5px auto 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#selectImg-1 {
+    background-image: url('../img/QuestionScreen/MainImages/1.png');
+}
+
+#selectImg-2 {
+    background-image: url('../img/QuestionScreen/MainImages/2.png');
+}
+
+#selectImg-3 {
+    background-image: url('../img/QuestionScreen/MainImages/3.png');
+}
+
+#selectImg-4 {
+    background-image: url('../img/QuestionScreen/MainImages/4.png');
+}
+
+#selectImg-5 {
+    background-image: url('../img/QuestionScreen/MainImages/5.png');
+}
+
+#selectImg-6 {
+    background-image: url('../img/QuestionScreen/MainImages/6.png');
+}
+
+#selectImg-7 {
+    background-image: url('../img/QuestionScreen/MainImages/7.png');
+}
+
+#selectImg-8 {
+    background-image: url('../img/QuestionScreen/MainImages/8.png');
 }
 
 .selectContent {
@@ -123,7 +207,8 @@ body {
     width: 100vw;
     height: 100%;
     display: grid;
-    grid-template-rows: 45% 20% 17.5% 17.5%;
+    grid-template-rows: 38% 12% 16% 16%;
+    place-items: center;
 }
 
 .selectText {
@@ -132,28 +217,119 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: clamp(14px, 2.96vw, 24px);
-    line-height: 1.47;
-    font-weight: 800;
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    font-size: 83%;
+    color: #51483c;
+    line-height: 1.25;
+    letter-spacing: -0.05em;
     text-align: center;
+    font-weight: 600;
 }
 
 .selectButton {
-    width: calc(100% - 40px);
+    width: calc(100% - 60px);
+    max-width: 600px;
     height: calc(100% - 15px);
     display: flex;
+    flex-direction: column;
+    background-color: rgb(255,254,251);
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: clamp(12px, 2.44vw, 24px);
-    font-weight: 600;
-    line-height: 1.47;
-    margin: 7.5px 20px;
-    border: 2px solid #000000;
+    font-family: 'ChosunGu';
+    font-style: italic;
+    color: #51483c;
+    font-size: 70%;
+    font-weight: 300;
+    line-height: 1.3;
+    margin: 0 auto 7.5px;
+    border: 2px solid rgb(82, 78, 51);
     cursor: pointer;
+    letter-spacing: -0.05em;
 }
 
 .selectButton:active {
-    background-color: #000000;
+    background-color: rgb(216, 216, 216);
     color: #ffffff;
+}
+
+.cancelButtonText {
+    color: #b9a79b;
+    text-decoration:line-through;
+}
+
+.highButtonText {
+    color: #86422b;
+}
+
+.resultPage {
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    display: grid;
+    grid-template-rows: 10% 70% 60px;
+    grid-gap: 10px;
+    padding: 7.5% 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    background-image: url('../img/QuestionScreen/RioPatternImage.svg');
+    background-size: cover;
+    background-position: center center; /* 중앙 정렬 */
+    background-repeat: no-repeat; /* 반복 방지 */
+}
+
+.resultTitle {
+    width: 100%;
+    height: 60%;
+    background-image: url('../img/FinalScreen/TitleImage.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.resultImg {
+    width: calc(100vw - 60px);
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.resultTextContainer {
+    text-align: center;
+    font-family: 'ImcreSoojin';
+    font-size: 13px;
+    font-weight: 300 !important;
+    color: #51483c;
+    line-height: 1.25;
+    letter-spacing: -0.05em;
+}
+
+@keyframes bounce {
+    0% {
+        top: 100vw;
+    }
+    30% {
+        top: 0;
+    }
+    50% {
+        top: 30vw;
+    }
+    70% {
+        top: 0;
+    }
+    80% {
+        top: 10vw;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+.bounce {
+    position: relative;
+    animation: bounce 0.5s ease;
 }

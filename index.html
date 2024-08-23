@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <link rel="preload" href="./img/QuestionScreen/RioPatternImage.svg" as="image">
+    <link rel="preload" href="./img/QuestionScreen/TitleImage.svg" as="image">
 
 
     <script src="./js/saveData.js"></script>
@@ -16,67 +19,137 @@
 <body>
     <div class="viewport">
         <div class="startPage">
-            <div class="startTitle">리쪽력 테스트</div>
-            <input type="text" class="nameInput" placeholder="이름 입력하기">
+            <div class="startTitle"></div>
             <div class="startButton">시작하기</div>
         </div>
         <div class="selectPage">
-            <div class="selectHeader">
-                <div class="selectTitle">리쪽력 테스트</div>
-                <div class="bar"></div>
-            </div>
-            <div class="selectContent">
-                <div class="selectItem" id="1st">
-                    <div class="selectImg"></div>
-                    <div class="selectText">타코야끼 맛도리겠당🤤<br/>근데,푸드트럭에 줄이 너무 기네..?</div>
-                    <div class="selectButton" id="1-1">무조건 먹고 싶은거 먹을거리오..! 더워도 기다릴거야.</div>
-                    <div class="selectButton" id="1-2">기다리기 귀찮리오... 그냥 다른거 먹지 뭐!</div>
+            <div class="selectContainer">
+                <div class="selectHeader">
+                    <div class="selectTitle"></div>
+                    <div class="selectCalendar"></div>
+                    <div class="bar"></div>
                 </div>
-                <div class="selectItem" id="2nd">
-                    <div class="selectImg"></div>
-                    <div class="selectText">수업시간이 30분 밖에 안남아서 부스를 한 개 밖에 못해ㅜㅜ<br/>무엇을 하리오?🤔</div>
-                    <div class="selectButton" id="2-1">흠.. 몸을 잘써야 진정한 오리. 미니게임에서 오리력을 보여주겠닷.</div>
-                    <div class="selectButton" id="2-2">어떡해...! 정신없이 놀다보니깐 수업시간이 지나있쟈나...</div>
-                </div>
-                <div class="selectItem" id="3rd">
-                    <div class="selectImg"></div>
-                    <div class="selectText">축제를 마치고 돌아가는 길.<br/>교통이 막혀 버스를 타면 집에 늦게 도착할 것 같다.</div>
-                    <div class="selectButton" id="3-1">버스 안에서라도 즐길 거리를 찾아보자</div>
-                    <div class="selectButton" id="3-2">지름길을 찾아서라도 빨리 집에 가야겠다</div>
-                </div>
-                <div class="selectItem" id="4th">
-                    <div class="selectImg"></div>
-                    <div class="selectText">축제의 절정에 다다른 밤, 폐막제에서 응원단 무대를 보고 있다.</div>
-                    <div class="selectButton" id="4-1">미친듯이 야광봉을 휘두르겠어!</div>
-                    <div class="selectButton" id="4-2">리오 못참겠어, 나도 저기 껴서 춤출래!! ❤️</div>
-                </div>
-                <div class="selectItem" id="5th">
-                    <div class="selectImg"></div>
-                    <div class="selectText">축제 첫째날 저녁이 된 리오, 술이 먹고 싶은걸~ 어떡하지?</div>
-                    <div class="selectButton" id="5-1">화학실험에서 배운대로 알코올을 잔디광장 한 가운데에서 제조한다<br/>(※주의※ 위험하므로 절대 시도하지 말 것...ᅲᅲ)</div>
-                    <div class="selectButton" id="5-2">우리에겐 샤로수길이 있지...! 서울대멀구역에 가서 술을 마신다</div>
-                </div>
-                <div class="selectItem" id="6th">
-                    <div class="selectImg"></div>
-                    <div class="selectText">잔디광장을 가득 채운 먹거리장터와 예술장터에서 주문을 해보았다..!</div>
-                    <div class="selectButton" id="6-1">헨젤과 그레텔처럼 닭강정을 한 알씩<br/>푸르른 잔디광장 위에 떨어뜨려봐야지! (대체 왜 그런 짓을)</div>
-                    <div class="selectButton" id="6-2">서비스를 듬뿍 준 학우랑 친해지고 싶어..! 학과와 학번을 물어봐야겠다!</div>
-                </div>
-                <div class="selectItem" id="7th">
-                    <div class="selectImg"></div>
-                    <div class="selectText"> &lt;샤.오.뮤&gt; 코너에 락 밴드가 등장하였다!</div>
-                    <div class="selectButton" id="7-1">락커들의 음악을 들으며 잔디광장 빈백에 누워<br/>고상하게 &lt;낭만학개론&gt;을 읽어야지.</div>
-                    <div class="selectButton" id="7-2">후끈후끈 달아오른 열기를 견딜 수 없어... 생수를 사방에 뿌리면서 놀겠어!</div>
-                </div>
-                <div class="selectItem" id="8th">
-                    <div class="selectImg"></div>
-                    <div class="selectText">축제 둘째날 저녁, 잔디광장을 가득 채운 캠핑!</div>
-                    <div class="selectButton" id="8-1">캠핑에는 캠프파이어지~ 잔디로 모닥불 만들어야지 ><</div>
-                    <div class="selectButton" id="8-2">낭만에 젖어 눈물이 뚝뚝 떨어진다... 샤뽕에 취해버린 리오...</div>
+                <div class="selectContent">
+                    <div class="selectItem" id="1st">
+                        <div class="selectImg" id="selectImg-1"></div>
+                        <div class="selectText">타코야끼 맛도리겠당🤤<br/>근데,푸드트럭에 줄이 너무 기네..?</div>
+                        <div class="selectButton" id="1-1">무조건 먹고 싶은거 먹을거리오..!<br/>더워도 기다릴거야.</div>
+                        <div class="selectButton" id="1-2">기다리기 귀찮리오...<br/>그냥 다른거 먹지 뭐!</div>
+                    </div>
+                    <div class="selectItem" id="2nd">
+                        <div class="selectImg" id="selectImg-2"></div>
+                        <div class="selectText"> &lt;샤.오.뮤&gt; 코너에 락 밴드가 등장하였다!</div>
+                        <div class="selectButton" id="2-1">락커들의 음악을 들으며 잔디광장 빈백에 누워<br/>고상하게 &lt;낭만학개론&gt;을 읽어야지.</div>
+                        <div class="selectButton" id="2-2">후끈후끈 달아오른 열기를 견딜 수 없어...<br/>생수를 사방에 뿌리면서 놀겠어!</div>
+                    </div>
+                    <div class="selectItem" id="3rd">
+                        <div class="selectImg" id="selectImg-3"></div>
+                        <div class="selectText">축제 첫째날 저녁이 된 리오, 술이 먹고 싶은걸~ 어떡하지?</div>
+                        <div class="selectButton" id="3-1">화학실험에서 배운대로<br/>알코올을 잔디광장 한 가운데에서 제조한다<br/><div class="cancelButtonText">(매니스커스 매니스커스)</div><div class="highButtonText">(※주의※ 위험하므로 절대 시도하지 말 것...ᅲᅲ)</div></div>
+                        <div class="selectButton" id="3-2">우리에겐 샤로수길이 있지...!<br/>서울대멀구역에 가서 술을 마신다</div>
+                    </div>
+                    <div class="selectItem" id="4th">
+                        <div class="selectImg" id="selectImg-4"></div>
+                        <div class="selectText">잔디광장을 가득 채운 먹거리장터와 예술장터에서 주문을 해보았다..!</div>
+                        <div class="selectButton" id="4-1">헨젤과 그레텔처럼 닭강정을 한 알씩<br/>푸르른 잔디광장 위에 떨어뜨려봐야지!<br/><div class="cancelButtonText">(대체 왜 그런 짓을)</div></div>
+                        <div class="selectButton" id="4-2">서비스를 듬뿍 준 학우랑 친해지고 싶어..!<br/>학과와 학번을 물어봐야겠다!</div>
+                    </div>
+                    <div class="selectItem" id="5th">
+                        <div class="selectImg" id="selectImg-5"></div>
+                        <div class="selectText">축제 둘째날 저녁, 잔디광장을 가득 채운 캠핑!</div>
+                        <div class="selectButton" id="5-1">캠핑에는 캠프파이어지~<br/>잔디로 모닥불 만들어야지 ><</div>
+                        <div class="selectButton" id="5-2">낭만에 젖어 눈물이 뚝뚝 떨어진다...<br/>샤뽕에 취해버린 리오...</div>
+                    </div>
+                    <div class="selectItem" id="6th">
+                        <div class="selectImg" id="selectImg-6"></div>
+                        <div class="selectText">축제를 마치고 돌아가는 길.<br/>교통이 막혀 버스를 타면 집에 늦게 도착할 것 같다.</div>
+                        <div class="selectButton" id="6-1">버스 안에서라도 즐길 거리를 찾아보자</div>
+                        <div class="selectButton" id="6-2">지름길을 찾아서라도 빨리 집에 가야겠다</div>
+                    </div>
+                    <div class="selectItem" id="7th">
+                        <div class="selectImg" id="selectImg-7"></div>
+                        <div class="selectText">수업시간이 30분 밖에 안남아서<br/>부스를 한 개 밖에 못해ㅜㅜ 무엇을 하리오?</div>
+                        <div class="selectButton" id="7-1">흠.. 몸을 잘써야 진정한 오리.<br/>미니게임에서 오리력을 보여주겠닷.</div>
+                        <div class="selectButton" id="7-2">어떡해...! 정신없이 놀다보니깐<br/>수업시간이 지나있쟈나...</div>
+                    </div>
+                    <div class="selectItem" id="8th">
+                        <div class="selectImg" id="selectImg-8"></div>
+                        <div class="selectText">축제의 절정에 다다른 밤,<br/>폐막제에서 응원단 무대를 보고 있다.</div>
+                        <div class="selectButton" id="8-1">미친듯이 야광봉을 휘두르겠어!</div>
+                        <div class="selectButton" id="8-2">리오 못참겠어, 나도 저기 껴서 춤출래!! ♡</div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="resultPage"></div>
+        <div class="resultPage">
+            <div class="resultTitle"></div>
+            <div class="resultImg"></div>
+            <div class="resultTextContainer">
+                <div class="resultText1"></div>
+                <div class="resultText2"></div>
+                <div class="resultText3"></div>
+            </div>
+        </div>
     </div>
+    <script>
+        function updateViewBox() {
+          const svg = document.getElementById('titleImage');
+          const container = svg.parentElement;
+          const containerWidth = container.clientWidth;
+          const containerHeight = container.clientHeight;
+          
+          // SVG의 원래 비율 유지
+          const aspectRatio = 600 / 465;
+          
+          let newWidth, newHeight;
+          if (containerWidth / containerHeight > aspectRatio) {
+            newHeight = containerHeight;
+            newWidth = newHeight * aspectRatio;
+          } else {
+            newWidth = containerWidth;
+            newHeight = newWidth / aspectRatio;
+          }
+          
+          svg.setAttribute('viewBox', `0 0 ${newWidth} ${newHeight}`);
+        }
+      
+        // 페이지 로드 시와 창 크기 변경 시 viewBox 업데이트
+        window.addEventListener('load', updateViewBox);
+        window.addEventListener('resize', updateViewBox);
+    </script>
+    <script>
+        function setViewportHeight() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+            document.querySelector('.viewport').style.height = `${window.innerHeight}px`;
+        }
+
+        window.addEventListener('resize', setViewportHeight);
+        setViewportHeight();
+    </script>
+    <script>
+        // 이미지 프리로드
+        function preloadImages() {
+            const images = [
+                '../img/QuestionScreen/CalendarImages/25.png',
+                '../img/QuestionScreen/CalendarImages/26.png',
+                '../img/QuestionScreen/ProgressBarImages/2.png',
+                '../img/QuestionScreen/ProgressBarImages/3.png',
+                '../img/QuestionScreen/ProgressBarImages/4.png',
+                '../img/QuestionScreen/ProgressBarImages/5.png',
+                '../img/QuestionScreen/ProgressBarImages/6.png',
+                '../img/QuestionScreen/ProgressBarImages/7.png',
+                '../img/QuestionScreen/ProgressBarImages/8.png'
+            ];
+            
+            images.forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
+        }
+
+        // 페이지 로드 시 이미지 프리로드 실행
+        window.addEventListener('load', preloadImages);
+    </script>
 </body>
 </html>

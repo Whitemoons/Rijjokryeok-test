@@ -2,13 +2,18 @@
 document.addEventListener('DOMContentLoaded', () => {
     const startButton = document.querySelector('.startButton');
     startButton.addEventListener('click', ()=>{
-        if(saveNameToCookie()){
-            hideStartPage();
-            saveScoreToCookie(0);
-            updateProgressBar(1);
-        } else {
-            alert('이름을 입력해주세요.');
-        }
+        hideStartPage();
+        saveScoreToCookie(0);
+        updateProgressBar(1);
+    });
+    startButton.addEventListener('touchstart', function() {
+        this.style.backgroundColor = '#51483c';
+        this.style.color = '#ffffff';
+    });
+
+    startButton.addEventListener('touchend', function() {
+        this.style.backgroundColor = '';
+        this.style.color = '';
     });
 });
 
@@ -17,6 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const selectButtons = document.querySelectorAll('.selectButton');
     selectButtons.forEach(button => {
         button.addEventListener('click', handleSelectButtonClick);
+
+        button.addEventListener('touchstart', function() {
+            this.style.backgroundColor = '#51483c';
+            this.style.color = '#ffffff';
+        });
+    
+        button.addEventListener('touchend', function() {
+            this.style.backgroundColor = '';
+            this.style.color = '';
+        });
     });
 });
 
