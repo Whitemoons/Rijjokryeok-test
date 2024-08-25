@@ -82,16 +82,18 @@
             </div>
         </div>
         <div class="resultPage">
-            <div class="resultTitle">
-                <div class="capture"></div>
-                <div class="title"></div>
-                <div class="storyshare"></div>
-            </div>
-            <div class="resultImg"></div>
-            <div class="resultTextContainer">
-                <div class="resultText1"></div>
-                <div class="resultText2"></div>
-                <div class="resultText3"></div>
+            <div class="resultPageContainer">
+                <div class="resultTitle">
+                    <div class="capture"></div>
+                    <div class="title"></div>
+                    <div class="storyshare"></div>
+                </div>
+                <div class="resultImg"></div>
+                <div class="resultTextContainer">
+                    <div class="resultText1"></div>
+                    <div class="resultText2"></div>
+                    <div class="resultText3"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -125,7 +127,10 @@
         function setViewportHeight() {
             let vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty('--vh', `${vh}px`);
+            // viewport의 높이를 vh 단위로 설정
             document.querySelector('.viewport').style.height = `${window.innerHeight}px`;
+            // 추가: body의 높이도 설정하여 툴바에 가려지지 않도록 함
+            document.body.style.height = `${window.innerHeight}px`;
         }
 
         window.addEventListener('resize', setViewportHeight);

@@ -146,11 +146,3 @@ function showResultPage() {
         resultText3.innerText = resultText[4][2];
     }
 }
-// 실제 뷰포트 높이 계산 및 CSS 변수 설정
-function setVH() {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
-
-// 초기 실행
-setVH();
