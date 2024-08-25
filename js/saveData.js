@@ -23,7 +23,7 @@ function getScoreFromCookie() {
 // 점수를 갱신하는 함수
 function updateScore(newScore) {
     const currentScore = getScoreFromCookie();
-    const updatedScore = newScore || currentScore || 0;
+    const updatedScore = newScore + currentScore;
     saveScoreToCookie(updatedScore);
     return updatedScore;
 }

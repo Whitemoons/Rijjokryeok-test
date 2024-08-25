@@ -284,11 +284,32 @@ body {
 
 .resultTitle {
     width: 100%;
-    height: 60%;
-    background-image: url('../img/FinalScreen/TitleImage.svg');
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultTitle div {
+    width: 12%;
+    height: 80%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.resultTitle .capture {
+    background-image: url('../img/FinalScreen/Capture.svg');
+    transform: translate(-25px, -8px) rotate(-20deg);
+}
+
+.resultTitle .title {
+    background-image: url('../img/FinalScreen/TitleImage.svg');
+}
+
+.resultTitle .storyshare {
+    background-image: url('../img/FinalScreen/StoryShare.svg');
+    transform: translate(25px, 8px) rotate(20deg);
 }
 
 .resultImg {
@@ -332,5 +353,5 @@ body {
 
 .bounce {
     position: relative;
-    animation: bounce 0.5s ease;
+    animation: bounce 0.8s ease;
 }
